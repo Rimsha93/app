@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+#  React + TypeScript + Vite App
+A modern frontend application built using **React**, **TypeScript**, and **Vite**.  
+This project provides a fast development environment with clean structure and scalable setup.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# About The Project
+This project is a starter frontend setup using:
+- ⚛️ React
+- 🟦 TypeScript
+- ⚡ Vite
+- 🎨 Tailwind CSS (if configured)
+- 🧹 ESLint
 
-Currently, two official plugins are available:
+It is optimized for performance and clean code structure.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+##  Installation Guide
+Follow these steps to run the project locally:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 1️⃣ Clone the repository
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/Rimsha93/app.git
+cd app
+2️⃣ Install dependencies
+npm install
+3️⃣ Start development server
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Now open:
+http://localhost:5173/
+📦 Build for Production
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# To create a production build:
+npm run build
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# To preview the production build:
+npm run preview
+📂 Project Structure
+app/
+│
+├── public/            # Static files
+├── src/               # Main source code
+│   ├── components/    # Reusable components
+│   ├── App.tsx        # Main app component
+│   └── main.tsx       # Entry point
+│
+├── index.html
+├── package.json
+├── vite.config.ts
+└── tsconfig.json
+🎯 Available Scripts
+Command	Description
+npm run dev	Start development server
+npm run build	Build for production
+npm run preview	Preview production build
+npm run lint	Run ESLint
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Author
+Rimsha Zahid
+GitHub: https://github.com/Rimsha93
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📄 License
+This project is open-source and free to use.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⭐ If you like this project, consider giving it a star on GitHub!
