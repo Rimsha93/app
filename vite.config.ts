@@ -6,7 +6,14 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 // https://vite.dev/config/
 export default defineConfig({
   base: './',
+
+  server: {
+    host: true,           // allow external access
+    allowedHosts: true,  // allow ngrok domain
+  },
+
   plugins: [inspectAttr(), react()],
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
